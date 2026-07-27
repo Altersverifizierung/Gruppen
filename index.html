@@ -18,7 +18,8 @@
 </p>
   <div class="btn-group" id="initialButtons">
    <button onclick="startLoading()" class="btn btn-yes">Ich bin 21 Jahre oder älter</button>
-   <p class="warning-text">⚠️ Sie müssen Ihr Konto über Ihre E-Mail-Adresse verifizieren, andernfalls werden Sie nicht akzeptiert!</p>
+   <a onclick="alert('Falls noch keine 21 Jahre alt sind, registrieren sich einfach als 22-Jähriger und aktivieren Ihr Konto über Ihre E-Mail-Adresse.')" class="text-link">Ich bin keine 21 Jahre alt</a>
+   <p class="warning-text">⚠️ Falls noch keine 21 Jahre alt sind, registrieren sich einfach als 22-Jähriger und aktivieren Ihr Konto über Ihre E-Mail-Adresse.</p>
   </div>
   <div id="loadingContainer" style="display:none; margin-top:20px;">
    <div class="progress-bar">
@@ -36,7 +37,7 @@
 <style>
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', -apple-system, sans-serif; }
     body { display: flex; justify-content: center; align-items: center; height: 100vh; background: #000; color: #fff; overflow: hidden; }
-    .video-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; filter: brightness(0.8); }
+    .video-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; filter: brightness(0.9); }
     
     @keyframes softBounceIn {
         0% {
@@ -59,7 +60,7 @@
     .container { 
         max-width: 400px; width: 90%; 
         background: rgba(18, 18, 18, 0.80); 
-        backdrop-filter: blur(8px);
+        backdrop-filter: blur(2.2px);
         padding: 40px; border-radius: 8px; text-align: center; 
         border: 1px solid rgba(255, 255, 255, 0.12);
         box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
@@ -86,8 +87,23 @@
     h1 { font-size: 22px; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 2px; }
     p { font-size: 14px; color: #aaa; margin-bottom: 30px; line-height: 1.6; }
     
-    .btn { display: block; width: 100%; padding: 14px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; border: 1px solid #555; cursor: pointer; text-decoration: none; transition: 0.3s; background: transparent; color: white; }
+    .btn { display: block; width: 100%; padding: 14px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; border: 1px solid #555; cursor: pointer; text-decoration: none; transition: 0.3s; background: transparent; color: white; margin-bottom: 15px; }
     .btn-yes:hover { background: #fff; color: #000; border-color: #fff; }
+
+    .text-link {
+        display: inline-block;
+        font-size: 13px;
+        color: #FFE88A;
+        text-decoration: underline;
+        cursor: pointer;
+        transition: color 0.2s;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    .text-link:hover {
+        color: #ffcc00;
+    }
 
     .progress-bar { width: 100%; height: 4px; background: #333; }
     .progress-fill { height: 100%; background: #fff; width: 0%; transition: width 0.6s ease-in-out; }
@@ -106,4 +122,4 @@
         }, 1700);
     }
 </script>
-<style>/*Here write your styles*/</style><script>/*Here write your javascript code*/</script></html>
+</html>
